@@ -62,11 +62,31 @@ for(let price of prices) {
 }
 console.log(total);
 
-function forEach(arr, callback) {
-    for(let i = 0; i < arr.length; i++) {
-        callback(arr[i]);
-    }
-}
+// function forEach(arr, callback) {
+//     for(let i = 0; i < arr.length; i++) {
+//         callback(arr[i]);
+//     }
+// }
 
 // forEach(colors);
 
+myMap([1, 2, 3], function(val) {
+    return val *3
+})
+
+function myMap(arr, callback) {
+    const mappedArray = [];
+    for(let i =0; i < arr.length; i++) {
+        mappedArray.push(callback(arr[i]));
+    }
+    return mappedArray
+}
+ 
+
+
+function forEach(arr, callback) {
+    const newArry = []; 
+    for(let i= 0; i < arr.length; i++) {
+       console.log(arr[i] * 2);
+    }
+}
